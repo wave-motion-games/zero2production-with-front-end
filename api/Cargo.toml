@@ -1,0 +1,46 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "api"
+
+
+[dependencies]
+actix-web = "4"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = "1.0.115"
+config = { version = "0.14", default-features = false, features = ["yaml"] }
+sqlx = { version = "0.8", default-features = false, features = [
+    "runtime-tokio-rustls",
+    "macros",
+    "postgres",
+    "uuid",
+    "chrono",
+    "migrate",
+] }
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
+tracing = "0.1.19"
+tracing-subscriber = { version = "0.3", features = ["registry", "env-filter"] }
+tracing-bunyan-formatter = "0.3.1"
+serde-aux = "4"
+tracing-log = "0.2.0"
+tracing-actix-web = "0.7"
+secrecy = { version = "0.8", features = ["serde"] }
+unicode-segmentation = "1"
+claims = "0.7"
+validator = "0.18"
+
+[dev-dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+fake = "2.9"
+quickcheck = "1.0.3"
+quickcheck_macros = "1"
+rand = "0.8"
