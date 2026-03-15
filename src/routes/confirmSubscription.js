@@ -10,7 +10,7 @@ const onLoad = async () => {
 };
 
 const html = `
-  <h1>Subscription to Wave Motion Games Confirmed!</h1>
+  <h1>Subscription to Zero 2 Production Confirmed!</h1>
   <h3>Thank you for subscribing!</h3>
   <p>You will now recieve emails notifying you of new blog posts. Stay tuned!</p>
 `;

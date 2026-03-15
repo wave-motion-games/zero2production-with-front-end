@@ -1,7 +1,7 @@
 import './style.css';
 
 const html = `
-  <h1>Wave Motion Games</h1>
+  <h1>Zero 2 Production</h1>
   <h2>404 Page not found!</h2>
 `;
 
